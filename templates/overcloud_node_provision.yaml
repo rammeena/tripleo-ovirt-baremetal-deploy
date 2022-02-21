@@ -8,7 +8,7 @@
     - network: storage
       subnet: storage_subnet
     network_config:
-      template: ~/tripleo-overcloud-deploy/nic-config/multiple_nics_ceph.j2
+      template: ~/tripleo-ovirt-baremetal-deploy/nic-config/multiple_nics_ceph.j2
       networks_skip_config:
       - InternalApi
       - Tenant
@@ -38,7 +38,7 @@
     - network: external
       subnet: external_subnet
     network_config:
-      template: ~/tripleo-overcloud-deploy/nic-config/multiple_nics_cephmon.j2
+      template: ~/tripleo-ovirt-baremetal-deploy/nic-config/multiple_nics_cephmon.j2
       networks_skip_config:
       - InternalApi
       - Tenant
@@ -61,7 +61,7 @@
     - network: storage
       subnet: storage_subnet
     network_config:
-      template: ~/tripleo-overcloud-deploy/nic-config/multiple_nics_ceph.j2
+      template: ~/tripleo-ovirt-baremetal-deploy/nic-config/multiple_nics_ceph.j2
       networks_skip_config:
       - InternalApi
       - Tenant
