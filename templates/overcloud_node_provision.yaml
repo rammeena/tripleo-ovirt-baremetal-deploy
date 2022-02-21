@@ -44,7 +44,7 @@
       - Tenant
       - DataVlan
       default_route_network:
-      - External
+      - external
   ansible_playbooks:
     - playbook: baremetal_playbook.yaml
   instances:
