@@ -1,0 +1,115 @@
+parameter_defaults:
+  DeployedNetworkEnvironment:
+    net_attributes_map:
+      data_vlan:
+        network:
+          dns_domain: datavlan.ooo.maas.
+          mtu: 1500
+          name: data_vlan
+          tags:
+          - tripleo_net_idx=3
+          - tripleo_network_name=DataVlan
+        subnets:
+          data_vlan_subnet:
+            cidr: 172.22.45.0/24
+            dns_nameservers: []
+            gateway_ip: null
+            host_routes: []
+            ip_version: 4
+            name: data_vlan_subnet
+            tags:
+            - tripleo_vlan_id=45
+      external:
+        network:
+          dns_domain: extenal.ooo.maas.
+          mtu: 1500
+          name: external
+          tags:
+          - tripleo_vip=true
+          - tripleo_net_idx=4
+          - tripleo_network_name=External
+        subnets:
+          external_subnet:
+            cidr: 172.22.40.0/24
+            dns_nameservers: []
+            gateway_ip: 172.22.40.1
+            host_routes: []
+            ip_version: 4
+            name: external_subnet
+            tags:
+            - tripleo_vlan_id=40
+      internal_api:
+        network:
+          dns_domain: internalapi.ooo.maas.
+          mtu: 1500
+          name: internal_api
+          tags:
+          - tripleo_net_idx=0
+          - tripleo_network_name=InternalApi
+          - tripleo_vip=true
+        subnets:
+          internal_api_subnet:
+            cidr: 172.22.41.0/24
+            dns_nameservers: []
+            gateway_ip: null
+            host_routes: []
+            ip_version: 4
+            name: internal_api_subnet
+            tags:
+            - tripleo_vlan_id=41
+      storage:
+        network:
+          dns_domain: storage.ooo.maas.
+          mtu: 1500
+          name: storage
+          tags:
+          - tripleo_net_idx=1
+          - tripleo_network_name=Storage
+          - tripleo_vip=true
+        subnets:
+          storage_subnet:
+            cidr: 172.22.42.0/24
+            dns_nameservers: []
+            gateway_ip: 172.22.42.1
+            host_routes: []
+            ip_version: 4
+            name: storage_subnet
+            tags:
+            - tripleo_vlan_id=42
+      tenant:
+        network:
+          dns_domain: tenant.ooo.maas.
+          mtu: 1500
+          name: tenant
+          tags:
+          - tripleo_net_idx=2
+          - tripleo_network_name=Tenant
+        subnets:
+          tenant_subnet:
+            cidr: 172.22.44.0/24
+            dns_nameservers: []
+            gateway_ip: null
+            host_routes: []
+            ip_version: 4
+            name: tenant_subnet
+            tags:
+            - tripleo_vlan_id=44
+    net_cidr_map:
+      data_vlan:
+      - 172.22.45.0/24
+      external:
+      - 172.22.40.0/24
+      internal_api:
+      - 172.22.41.0/24
+      storage:
+      - 172.22.42.0/24
+      tenant:
+      - 172.22.44.0/24
+    net_ip_version_map:
+      data_vlan: 4
+      external: 4
+      internal_api: 4
+      storage: 4
+      tenant: 4
+resource_registry:
+  OS::TripleO::Network: /usr/share/openstack-tripleo-heat-templates/network/deployed_networks.yaml

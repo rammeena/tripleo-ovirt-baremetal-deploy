@@ -1,0 +1,27 @@
+---
+- name: Overcloud Node Additional Configuration
+  hosts: allovercloud
+  any_errors_fatal: true
+  gather_facts: false
+  become: true
+  pre_tasks:
+    - name: Wait for provisioned nodes to boot
+      wait_for:
+        timeout: 600
+        port: 22
+        host: '{{ ansible_host }}'
+        search_regex: OpenSSH
+        delay: 10
+        msg: Timeout waiting for provisioned nodes to become available
+      connection: local
+  tasks:
+    - name: create blacklist-ipmi config file to blacklist ipmi_si module
+      copy:
+        dest: /etc/modprobe.d/blacklist-ipmi.conf
+        content: |
+          blacklist ipmi_si
+
+    - name: Make sure systemd-modules-load.service service running
+      ansible.builtin.systemd:
+        state: started
+        name: systemd-modules-load

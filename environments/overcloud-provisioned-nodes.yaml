@@ -1,0 +1,167 @@
+parameter_defaults:
+  CephMonCount: 3
+  CephMonHostnameFormat: '%stackname%-cephmon-%index%'
+  CephStorageCount: 6
+  CephStorageHostnameFormat: '%stackname%-cephstorage-%index%'
+  DeployedServerPortMap:
+    hdd-osd-3-r1-ctlplane:
+      fixed_ips:
+      - ip_address: 172.22.43.24
+    hdd-osd-4-r2-ctlplane:
+      fixed_ips:
+      - ip_address: 172.22.43.43
+    hdd-osd-5-r3-ctlplane:
+      fixed_ips:
+      - ip_address: 172.22.43.28
+    mon-0-ctlplane:
+      fixed_ips:
+      - ip_address: 172.22.43.40
+    mon-1-ctlplane:
+      fixed_ips:
+      - ip_address: 172.22.43.44
+    mon-2-ctlplane:
+      fixed_ips:
+      - ip_address: 172.22.43.27
+    ssd-osd-0-r1-ctlplane:
+      fixed_ips:
+      - ip_address: 172.22.43.25
+    ssd-osd-1-r2-ctlplane:
+      fixed_ips:
+      - ip_address: 172.22.43.31
+    ssd-osd-2-r3-ctlplane:
+      fixed_ips:
+      - ip_address: 172.22.43.38
+  HostnameMap:
+    ceph-cephmon-0: mon-0
+    ceph-cephmon-1: mon-1
+    ceph-cephmon-2: mon-2
+    ceph-cephstorage-0: ssd-osd-0-r1
+    ceph-cephstorage-1: ssd-osd-1-r2
+    ceph-cephstorage-2: ssd-osd-2-r3
+    ceph-cephstorage-3: hdd-osd-3-r1
+    ceph-cephstorage-4: hdd-osd-4-r2
+    ceph-cephstorage-5: hdd-osd-5-r3
+  NodePortMap:
+    hdd-osd-3-r1:
+      ctlplane:
+        ip_address: 172.22.43.24
+        ip_address_uri: 172.22.43.24
+        ip_subnet: 172.22.43.24/24
+      external:
+        ip_address: 172.22.40.49
+        ip_address_uri: 172.22.40.49
+        ip_subnet: 172.22.40.49/24
+      storage:
+        ip_address: 172.22.42.42
+        ip_address_uri: 172.22.42.42
+        ip_subnet: 172.22.42.42/24
+    hdd-osd-4-r2:
+      ctlplane:
+        ip_address: 172.22.43.43
+        ip_address_uri: 172.22.43.43
+        ip_subnet: 172.22.43.43/24
+      external:
+        ip_address: 172.22.40.31
+        ip_address_uri: 172.22.40.31
+        ip_subnet: 172.22.40.31/24
+      storage:
+        ip_address: 172.22.42.40
+        ip_address_uri: 172.22.42.40
+        ip_subnet: 172.22.42.40/24
+    hdd-osd-5-r3:
+      ctlplane:
+        ip_address: 172.22.43.28
+        ip_address_uri: 172.22.43.28
+        ip_subnet: 172.22.43.28/24
+      external:
+        ip_address: 172.22.40.36
+        ip_address_uri: 172.22.40.36
+        ip_subnet: 172.22.40.36/24
+      storage:
+        ip_address: 172.22.42.34
+        ip_address_uri: 172.22.42.34
+        ip_subnet: 172.22.42.34/24
+    mon-0:
+      ctlplane:
+        ip_address: 172.22.43.40
+        ip_address_uri: 172.22.43.40
+        ip_subnet: 172.22.43.40/24
+      external:
+        ip_address: 172.22.40.48
+        ip_address_uri: 172.22.40.48
+        ip_subnet: 172.22.40.48/24
+      storage:
+        ip_address: 172.22.42.45
+        ip_address_uri: 172.22.42.45
+        ip_subnet: 172.22.42.45/24
+    mon-1:
+      ctlplane:
+        ip_address: 172.22.43.44
+        ip_address_uri: 172.22.43.44
+        ip_subnet: 172.22.43.44/24
+      external:
+        ip_address: 172.22.40.43
+        ip_address_uri: 172.22.40.43
+        ip_subnet: 172.22.40.43/24
+      storage:
+        ip_address: 172.22.42.44
+        ip_address_uri: 172.22.42.44
+        ip_subnet: 172.22.42.44/24
+    mon-2:
+      ctlplane:
+        ip_address: 172.22.43.27
+        ip_address_uri: 172.22.43.27
+        ip_subnet: 172.22.43.27/24
+      external:
+        ip_address: 172.22.40.30
+        ip_address_uri: 172.22.40.30
+        ip_subnet: 172.22.40.30/24
+      storage:
+        ip_address: 172.22.42.35
+        ip_address_uri: 172.22.42.35
+        ip_subnet: 172.22.42.35/24
+    ssd-osd-0-r1:
+      ctlplane:
+        ip_address: 172.22.43.25
+        ip_address_uri: 172.22.43.25
+        ip_subnet: 172.22.43.25/24
+      external:
+        ip_address: 172.22.40.45
+        ip_address_uri: 172.22.40.45
+        ip_subnet: 172.22.40.45/24
+      storage:
+        ip_address: 172.22.42.39
+        ip_address_uri: 172.22.42.39
+        ip_subnet: 172.22.42.39/24
+    ssd-osd-1-r2:
+      ctlplane:
+        ip_address: 172.22.43.31
+        ip_address_uri: 172.22.43.31
+        ip_subnet: 172.22.43.31/24
+      external:
+        ip_address: 172.22.40.40
+        ip_address_uri: 172.22.40.40
+        ip_subnet: 172.22.40.40/24
+      storage:
+        ip_address: 172.22.42.38
+        ip_address_uri: 172.22.42.38
+        ip_subnet: 172.22.42.38/24
+    ssd-osd-2-r3:
+      ctlplane:
+        ip_address: 172.22.43.38
+        ip_address_uri: 172.22.43.38
+        ip_subnet: 172.22.43.38/24
+      external:
+        ip_address: 172.22.40.50
+        ip_address_uri: 172.22.40.50
+        ip_subnet: 172.22.40.50/24
+      storage:
+        ip_address: 172.22.42.37
+        ip_address_uri: 172.22.42.37
+        ip_subnet: 172.22.42.37/24
+resource_registry:
+  OS::TripleO::CephMon::Ports::ExternalPort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_external.yaml
+  OS::TripleO::CephMon::Ports::StoragePort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_storage.yaml
+  OS::TripleO::CephStorage::Ports::ExternalPort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_external.yaml
+  OS::TripleO::CephStorage::Ports::StoragePort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_storage.yaml
+  OS::TripleO::DeployedServer::ControlPlanePort: /usr/share/openstack-tripleo-heat-templates/deployed-server/deployed-neutron-port.yaml

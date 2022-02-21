@@ -1,0 +1,62 @@
+- name: InternalApi
+  name_lower: internal_api
+  vip: true
+  mtu: 1500
+  dns_domain: internalapi.ooo.maas.
+  subnets:
+    internal_api_subnet:
+      ip_subnet: 172.22.41.0/24
+      allocation_pools:
+        - start: 172.22.41.30
+          end: 172.22.41.50
+      vlan: 41
+- name: Storage
+  name_lower: storage
+  vip: true
+  mtu: 1500
+  dns_domain: storage.ooo.maas.
+  subnets:
+    storage_subnet:
+      ip_subnet: 172.22.42.0/24
+      allocation_pools:
+        - start: 172.22.42.30
+          end: 172.22.42.50
+      gateway_ip: 172.22.42.1
+      vlan: 42
+- name: Tenant
+  name_lower: tenant
+  vip: false  # Tenant network does not use VIPs
+  mtu: 1500
+  dns_domain: tenant.ooo.maas.
+  subnets:
+    tenant_subnet:
+      ip_subnet: 172.22.44.0/24
+      allocation_pools:
+        - start: 172.22.44.30
+          end: 172.22.44.50
+      vlan: 44
+- name: DataVlan
+  name_lower: data_vlan
+  vip: false  # Tenant network does not use VIPs
+  mtu: 1500
+  dns_domain: datavlan.ooo.maas.
+  subnets:
+    data_vlan_subnet:
+      ip_subnet: 172.22.45.0/24
+      allocation_pools:
+        - start: 172.22.45.30
+          end: 172.22.45.50
+      vlan: 45
+- name: External
+  name_lower: external
+  vip: true
+  mtu: 1500
+  dns_domain: extenal.ooo.maas.
+  subnets:
+    external_subnet:
+      ip_subnet: 172.22.40.0/24
+      allocation_pools:
+        - start: 172.22.40.30
+          end: 172.22.40.50
+      gateway_ip: 172.22.40.1
+      vlan: 40
