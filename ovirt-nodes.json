@@ -179,6 +179,26 @@
               "pm_vm_name":"overcloud-cephosd-5-r3-hdd",
               "capabilities": "profile:ceph-storage,boot_option:local,node:ceph-osd-5",
               "_comment": "Ovirt Virtual Machine"
+          },
+          {
+              "name":"ovirt-ceph-monitoring",
+              "pm_type":"staging-ovirt",
+              "ports": [
+                {
+                    "address": "56:6f:16:55:00:39",
+                    "physical_network": "ctlplane"
+                }
+              ],
+              "cpu":"2",
+              "memory":"4096",
+              "disk":"100",
+              "arch":"x86_64",
+              "pm_user":"admin@internal",
+              "pm_password":"pass@123",
+              "pm_addr":"he1-ovirt-njlab.maas",
+              "pm_vm_name":"ceph-monitoring",
+              "capabilities": "profile:ceph-storage,boot_option:local,node:ceph-monitor",
+              "_comment": "Ovirt Virtual Machine"
           }
       ]
 }
