@@ -5,7 +5,7 @@
               "pm_type":"staging-ovirt",
               "ports": [
                 {
-                    "address": "56:6f:16:55:01:58",
+                    "address": "56:6f:16:55:01:c0",
                     "physical_network": "ctlplane"
                 }
               ],
@@ -22,7 +22,7 @@
               "pm_type":"staging-ovirt",
               "ports": [
                 {
-                    "address": "56:6f:16:55:01:5c",
+                    "address": "56:6f:16:55:01:c2",
                     "physical_network": "ctlplane"
                 }
               ],
@@ -39,7 +39,7 @@
               "pm_type":"staging-ovirt",
               "ports": [
                 {
-                    "address": "56:6f:16:55:01:60",
+                    "address": "56:6f:16:55:01:c4",
                     "physical_network": "ctlplane"
                 }
               ],
@@ -56,7 +56,7 @@
               "pm_type":"staging-ovirt",
               "ports": [
                 {
-                    "address": "56:6f:16:55:01:64",
+                    "address": "56:6f:16:55:01:c6",
                     "physical_network": "ctlplane"
                 }
               ],
@@ -73,7 +73,7 @@
               "pm_type":"staging-ovirt",
               "ports": [
                 {
-                    "address": "56:6f:16:55:01:67",
+                    "address": "56:6f:16:55:01:c9",
                     "physical_network": "ctlplane"
                 }
               ],
@@ -90,7 +90,7 @@
               "pm_type":"staging-ovirt",
               "ports": [
                 {
-                    "address": "56:6f:16:55:01:6a",
+                    "address": "56:6f:16:55:01:cc",
                     "physical_network": "ctlplane"
                 }
               ],
@@ -107,7 +107,7 @@
               "pm_type":"staging-ovirt",
               "ports": [
                 {
-                    "address": "56:6f:16:55:01:6d",
+                    "address": "56:6f:16:55:01:cf",
                     "physical_network": "ctlplane"
                 }
               ],
@@ -124,13 +124,10 @@
               "pm_type":"staging-ovirt",
               "ports": [
                 {
-                    "address": "56:6f:16:55:01:70",
+                    "address": "56:6f:16:55:01:d2",
                     "physical_network": "ctlplane"
                 }
               ],
-              "cpu":"2",
-              "memory":"8192",
-              "disk":"200",
               "arch":"x86_64",
               "pm_user":"admin@internal",
               "pm_password":"pass@123",
@@ -144,13 +141,10 @@
               "pm_type":"staging-ovirt",
               "ports": [
                 {
-                    "address": "56:6f:16:55:01:73",
+                    "address": "56:6f:16:55:01:d5",
                     "physical_network": "ctlplane"
                 }
               ],
-              "cpu":"2",
-              "memory":"8192",
-              "disk":"200",
               "arch":"x86_64",
               "pm_user":"admin@internal",
               "pm_password":"pass@123",
@@ -164,13 +158,10 @@
               "pm_type":"staging-ovirt",
               "ports": [
                 {
-                    "address": "56:6f:16:55:01:76",
+                    "address": "56:6f:16:55:01:d8",
                     "physical_network": "ctlplane"
                 }
               ],
-              "cpu":"2",
-              "memory":"4096",
-              "disk":"100",
               "arch":"x86_64",
               "pm_user":"admin@internal",
               "pm_password":"pass@123",
