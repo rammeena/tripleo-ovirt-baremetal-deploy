@@ -20,11 +20,11 @@
     - playbook: baremetal_playbook.yaml
   instances:
     - hostname: mon-0
-      name: ovirt-ceph-mon-0
+      name: tripleo-ovirt-ceph-mon0
     - hostname: mon-1
-      name: ovirt-ceph-mon-1
+      name: tripleo-ovirt-ceph-mon1
     - hostname: mon-2
-      name: ovirt-ceph-mon-2
+      name: tripleo-ovirt-ceph-mon2
 
 - name: CephMonitor
   count: 1
@@ -49,7 +49,7 @@
     - playbook: baremetal_playbook.yaml
   instances:
     - hostname: ceph-monitor
-      name: ovirt-ceph-monitoring
+      name: tripleo-ovirt-ceph-grafana
 
 - name: CephStorage
   count: 6
@@ -73,14 +73,14 @@
     - playbook: baremetal_playbook.yaml
   instances:
     - hostname: ssd-osd-0-r1
-      name: ovirt-cephosd-0-r1-ssd
+      name: tripleo-ovirt-ceph-osd0-r0-hdd
     - hostname: ssd-osd-1-r2
-      name: ovirt-cephosd-1-r2-ssd
+      name: tripleo-ovirt-ceph-osd1-r1-hdd
     - hostname: ssd-osd-2-r3
-      name: ovirt-cephosd-2-r3-ssd
+      name: tripleo-ovirt-ceph-osd2-r2-hdd
     - hostname: hdd-osd-3-r1
-      name: ovirt-cephosd-3-r1-hdd
+      name: tripleo-ovirt-ceph-osd3-r0-ssd
     - hostname: hdd-osd-4-r2
-      name: ovirt-cephosd-4-r2-hdd
+      name: tripleo-ovirt-ceph-osd4-r1-ssd
     - hostname: hdd-osd-5-r3
-      name: ovirt-cephosd-5-r3-hdd
+      name: tripleo-ovirt-ceph-osd5-r2-ssd

@@ -1,11 +1,130 @@
 {
       "nodes": [
           {
-              "name":"ovirt-ceph-mon-0",
+              "name":"tripleo-ovirt-ceph-mon0",
               "pm_type":"staging-ovirt",
               "ports": [
                 {
-                    "address": "56:6f:16:55:00:07",
+                    "address": "56:6f:16:55:01:58",
+                    "physical_network": "ctlplane"
+                }
+              ],
+              "arch":"x86_64",
+              "pm_user":"admin@internal",
+              "pm_password":"pass@123",
+              "pm_addr":"he1-ovirt-njlab.maas",
+              "pm_vm_name":"tripleo-ovirt-ceph-mon0",
+              "capabilities": "profile:ceph-storage,boot_option:local",
+              "_comment": "Ovirt Virtual Machine"
+          },
+          {
+              "name":"tripleo-ovirt-ceph-mon1",
+              "pm_type":"staging-ovirt",
+              "ports": [
+                {
+                    "address": "56:6f:16:55:01:5c",
+                    "physical_network": "ctlplane"
+                }
+              ],
+              "arch":"x86_64",
+              "pm_user":"admin@internal",
+              "pm_password":"pass@123",
+              "pm_addr":"he1-ovirt-njlab.maas",
+              "pm_vm_name":"tripleo-ovirt-ceph-mon1",
+              "capabilities": "profile:ceph-storage,boot_option:local",
+              "_comment": "Ovirt Virtual Machine"
+          },
+          {
+              "name":"tripleo-ovirt-ceph-mon2",
+              "pm_type":"staging-ovirt",
+              "ports": [
+                {
+                    "address": "56:6f:16:55:01:60",
+                    "physical_network": "ctlplane"
+                }
+              ],
+              "arch":"x86_64",
+              "pm_user":"admin@internal",
+              "pm_password":"pass@123",
+              "pm_addr":"he1-ovirt-njlab.maas",
+              "pm_vm_name":"tripleo-ovirt-ceph-mon2",
+              "capabilities": "profile:ceph-storage,boot_option:local",
+              "_comment": "Ovirt Virtual Machine"
+          },
+          {
+              "name":"tripleo-ovirt-ceph-osd0-r0-hdd",
+              "pm_type":"staging-ovirt",
+              "ports": [
+                {
+                    "address": "56:6f:16:55:01:64",
+                    "physical_network": "ctlplane"
+                }
+              ],
+              "arch":"x86_64",
+              "pm_user":"admin@internal",
+              "pm_password":"pass@123",
+              "pm_addr":"he1-ovirt-njlab.maas",
+              "pm_vm_name":"tripleo-ovirt-ceph-osd0-r0-hdd",
+              "capabilities": "profile:ceph-storage,boot_option:local",
+              "_comment": "Ovirt Virtual Machine"
+          },
+          {
+              "name":"tripleo-ovirt-ceph-osd1-r1-hdd",
+              "pm_type":"staging-ovirt",
+              "ports": [
+                {
+                    "address": "56:6f:16:55:01:67",
+                    "physical_network": "ctlplane"
+                }
+              ],
+              "arch":"x86_64",
+              "pm_user":"admin@internal",
+              "pm_password":"pass@123",
+              "pm_addr":"he1-ovirt-njlab.maas",
+              "pm_vm_name":"tripleo-ovirt-ceph-osd1-r1-hdd",
+              "capabilities": "profile:ceph-storage,boot_option:local",
+              "_comment": "Ovirt Virtual Machine"
+          },
+          {
+              "name":"tripleo-ovirt-ceph-osd2-r2-hdd",
+              "pm_type":"staging-ovirt",
+              "ports": [
+                {
+                    "address": "56:6f:16:55:01:6a",
+                    "physical_network": "ctlplane"
+                }
+              ],
+              "arch":"x86_64",
+              "pm_user":"admin@internal",
+              "pm_password":"pass@123",
+              "pm_addr":"he1-ovirt-njlab.maas",
+              "pm_vm_name":"tripleo-ovirt-ceph-osd2-r2-hdd",
+              "capabilities": "profile:ceph-storage,boot_option:local",
+              "_comment": "Ovirt Virtual Machine"
+          },
+          {
+              "name":"tripleo-ovirt-ceph-osd3-r0-ssd",
+              "pm_type":"staging-ovirt",
+              "ports": [
+                {
+                    "address": "56:6f:16:55:01:6d",
+                    "physical_network": "ctlplane"
+                }
+              ],
+              "arch":"x86_64",
+              "pm_user":"admin@internal",
+              "pm_password":"pass@123",
+              "pm_addr":"he1-ovirt-njlab.maas",
+              "pm_vm_name":"tripleo-ovirt-ceph-osd3-r0-ssd",
+              "capabilities": "profile:ceph-storage,boot_option:local",
+              "_comment": "Ovirt Virtual Machine"
+          },
+          {
+              "name":"tripleo-ovirt-ceph-osd4-r1-ssd",
+              "pm_type":"staging-ovirt",
+              "ports": [
+                {
+                    "address": "56:6f:16:55:01:70",
                     "physical_network": "ctlplane"
                 }
               ],
@@ -16,16 +135,16 @@
               "pm_user":"admin@internal",
               "pm_password":"pass@123",
               "pm_addr":"he1-ovirt-njlab.maas",
-              "pm_vm_name":"overcloud-cephmon-0",
-              "capabilities": "profile:ceph-storage,boot_option:local,node:ceph-mon-0",
+              "pm_vm_name":"tripleo-ovirt-ceph-osd4-r1-ssd",
+              "capabilities": "profile:ceph-storage,boot_option:local",
               "_comment": "Ovirt Virtual Machine"
           },
           {
-              "name":"ovirt-ceph-mon-1",
+              "name":"tripleo-ovirt-ceph-osd5-r2-ssd",
               "pm_type":"staging-ovirt",
               "ports": [
                 {
-                    "address": "56:6f:16:55:00:09",
+                    "address": "56:6f:16:55:01:73",
                     "physical_network": "ctlplane"
                 }
               ],
@@ -36,156 +155,16 @@
               "pm_user":"admin@internal",
               "pm_password":"pass@123",
               "pm_addr":"he1-ovirt-njlab.maas",
-              "pm_vm_name":"overcloud-cephmon-1",
-              "capabilities": "profile:ceph-storage,boot_option:local,node:ceph-mon-1",
+              "pm_vm_name":"tripleo-ovirt-ceph-osd5-r2-ssd",
+              "capabilities": "profile:ceph-storage,boot_option:local",
               "_comment": "Ovirt Virtual Machine"
           },
           {
-              "name":"ovirt-ceph-mon-2",
+              "name":"tripleo-ovirt-ceph-grafana",
               "pm_type":"staging-ovirt",
               "ports": [
                 {
-                    "address": "56:6f:16:55:00:0b",
-                    "physical_network": "ctlplane"
-                }
-              ],
-              "cpu":"2",
-              "memory":"8192",
-              "disk":"200",
-              "arch":"x86_64",
-              "pm_user":"admin@internal",
-              "pm_password":"pass@123",
-              "pm_addr":"he1-ovirt-njlab.maas",
-              "pm_vm_name":"overcloud-cephmon-2",
-              "capabilities": "profile:ceph-storage,boot_option:local,node:ceph-mon-2",
-              "_comment": "Ovirt Virtual Machine"
-          },
-          {
-              "name":"ovirt-cephosd-0-r1-ssd",
-              "pm_type":"staging-ovirt",
-              "ports": [
-                {
-                    "address": "56:6f:16:55:00:2a",
-                    "physical_network": "ctlplane"
-                }
-              ],
-              "cpu":"2",
-              "memory":"8192",
-              "disk":"200",
-              "arch":"x86_64",
-              "pm_user":"admin@internal",
-              "pm_password":"pass@123",
-              "pm_addr":"he1-ovirt-njlab.maas",
-              "pm_vm_name":"overcloud-cephosd-0-r1-ssd",
-              "capabilities": "profile:ceph-storage,boot_option:local,node:ceph-osd-0",
-              "_comment": "Ovirt Virtual Machine"
-          },
-          {
-              "name":"ovirt-cephosd-1-r2-ssd",
-              "pm_type":"staging-ovirt",
-              "ports": [
-                {
-                    "address": "56:6f:16:55:00:2c",
-                    "physical_network": "ctlplane"
-                }
-              ],
-              "cpu":"2",
-              "memory":"8192",
-              "disk":"200",
-              "arch":"x86_64",
-              "pm_user":"admin@internal",
-              "pm_password":"pass@123",
-              "pm_addr":"he1-ovirt-njlab.maas",
-              "pm_vm_name":"overcloud-cephosd-1-r2-ssd",
-              "capabilities": "profile:ceph-storage,boot_option:local,node:ceph-osd-1",
-              "_comment": "Ovirt Virtual Machine"
-          },
-          {
-              "name":"ovirt-cephosd-2-r3-ssd",
-              "pm_type":"staging-ovirt",
-              "ports": [
-                {
-                    "address": "56:6f:16:55:00:2e",
-                    "physical_network": "ctlplane"
-                }
-              ],
-              "cpu":"2",
-              "memory":"8192",
-              "disk":"200",
-              "arch":"x86_64",
-              "pm_user":"admin@internal",
-              "pm_password":"pass@123",
-              "pm_addr":"he1-ovirt-njlab.maas",
-              "pm_vm_name":"overcloud-cephosd-2-r3-ssd",
-              "capabilities": "profile:ceph-storage,boot_option:local,node:ceph-osd-2",
-              "_comment": "Ovirt Virtual Machine"
-          },
-          {
-              "name":"ovirt-cephosd-3-r1-hdd",
-              "pm_type":"staging-ovirt",
-              "ports": [
-                {
-                    "address": "56:6f:16:55:00:1d",
-                    "physical_network": "ctlplane"
-                }
-              ],
-              "cpu":"2",
-              "memory":"8192",
-              "disk":"200",
-              "arch":"x86_64",
-              "pm_user":"admin@internal",
-              "pm_password":"pass@123",
-              "pm_addr":"he1-ovirt-njlab.maas",
-              "pm_vm_name":"overcloud-cephosd-3-r1-hdd",
-              "capabilities": "profile:ceph-storage,boot_option:local,node:ceph-osd-3",
-              "_comment": "Ovirt Virtual Machine"
-          },
-          {
-              "name":"ovirt-cephosd-4-r2-hdd",
-              "pm_type":"staging-ovirt",
-              "ports": [
-                {
-                    "address": "56:6f:16:55:00:1f",
-                    "physical_network": "ctlplane"
-                }
-              ],
-              "cpu":"2",
-              "memory":"8192",
-              "disk":"200",
-              "arch":"x86_64",
-              "pm_user":"admin@internal",
-              "pm_password":"pass@123",
-              "pm_addr":"he1-ovirt-njlab.maas",
-              "pm_vm_name":"overcloud-cephosd-4-r2-hdd",
-              "capabilities": "profile:ceph-storage,boot_option:local,node:ceph-osd-4",
-              "_comment": "Ovirt Virtual Machine"
-          },
-          {
-              "name":"ovirt-cephosd-5-r3-hdd",
-              "pm_type":"staging-ovirt",
-              "ports": [
-                {
-                    "address": "56:6f:16:55:00:28",
-                    "physical_network": "ctlplane"
-                }
-              ],
-              "cpu":"2",
-              "memory":"8192",
-              "disk":"200",
-              "arch":"x86_64",
-              "pm_user":"admin@internal",
-              "pm_password":"pass@123",
-              "pm_addr":"he1-ovirt-njlab.maas",
-              "pm_vm_name":"overcloud-cephosd-5-r3-hdd",
-              "capabilities": "profile:ceph-storage,boot_option:local,node:ceph-osd-5",
-              "_comment": "Ovirt Virtual Machine"
-          },
-          {
-              "name":"ovirt-ceph-monitoring",
-              "pm_type":"staging-ovirt",
-              "ports": [
-                {
-                    "address": "56:6f:16:55:00:39",
+                    "address": "56:6f:16:55:01:76",
                     "physical_network": "ctlplane"
                 }
               ],
@@ -196,8 +175,8 @@
               "pm_user":"admin@internal",
               "pm_password":"pass@123",
               "pm_addr":"he1-ovirt-njlab.maas",
-              "pm_vm_name":"ceph-monitoring",
-              "capabilities": "profile:ceph-storage,boot_option:local,node:ceph-monitor",
+              "pm_vm_name":"tripleo-ovirt-ceph-grafana",
+              "capabilities": "profile:ceph-storage,boot_option:local",
               "_comment": "Ovirt Virtual Machine"
           }
       ]
